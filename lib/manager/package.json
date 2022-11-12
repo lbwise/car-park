@@ -1,0 +1,33 @@
+{
+  "name": "parking-manager",
+  "version": "1.0.0",
+  "description": "The management system of a car park business",
+  "main": "index.js",
+  "scripts": {
+    "test": "test dev run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiseli123/car-park.git"
+  },
+  "keywords": [
+    "booking",
+    "server",
+    "nodejs",
+    "express",
+    "mongodb",
+    "parking"
+  ],
+  "author": "Liam Wise",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wiseli123/car-park/issues"
+  },
+  "homepage": "https://github.com/wiseli123/car-park#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.7.2"
+  }
+}

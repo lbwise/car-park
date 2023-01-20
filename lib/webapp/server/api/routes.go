@@ -3,7 +3,6 @@ package api
 import (
 	"io"
 	"github.com/gin-gonic/gin"
-	"fmt"
 )
 
 func homeRoute(c *gin.Context) {
@@ -11,9 +10,11 @@ func homeRoute(c *gin.Context) {
 }
 
 
-func APIRouter(api *gin.RouterGroup) {
-	api.GET("/", homeRoute)
+func APIRouter(app *gin.Engine)  {
+	api := app.Group("/")
 	addUserRoutes(api)
-	addLotRoutes(api)
-	addBookRoutes(api)
+	addBookingRoutes(api)
+	api.GET("/", homeRoute)
+	// addLotRoutes(api)
+	// addBookRoutes(api)
 }

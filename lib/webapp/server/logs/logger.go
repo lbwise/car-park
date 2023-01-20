@@ -22,6 +22,12 @@ func (lg *logger) Fatal(err error) {
 	lg.logs.Fatal(err)
 }
 
+func (lg *logger) Error(err error) {
+	lg.logs.Println("-----------[ERROR]------------")
+	lg.logs.Println(err)
+	lg.logs.Println("-------------------------------")
+}
+
 func NewLogger() *logger {
 	return &logger{
 		logs: log.New(os.Stdout, "webapp logs: ", log.LstdFlags),

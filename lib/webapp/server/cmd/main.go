@@ -23,9 +23,8 @@ func main() {
 	}
 
 	app.Use(lg.LogMiddleware)
+	api.APIRouter(app)
 
-	apiGroup := app.Group("/")
-	api.APIRouter(apiGroup)
 
 	go func () {
 		err := app.Run(":9000")
